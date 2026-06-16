@@ -13,13 +13,13 @@ Copy `.claude/` + `docs/` into your project and wire the `CLAUDE.md` import — 
 # macOS / Linux
 cp -R fullstack-pack/.claude /path/to/your-project/.claude
 cp -R fullstack-pack/docs    /path/to/your-project/docs
-echo '@.claude/fullstack-pack.CLAUDE.md' >> /path/to/your-project/CLAUDE.md
+echo '@.claude/pack-guidance.md' >> /path/to/your-project/CLAUDE.md
 ```
 ```powershell
 # Windows PowerShell
 Copy-Item -Recurse fullstack-pack\.claude C:\path\to\your-project\.claude
 Copy-Item -Recurse fullstack-pack\docs    C:\path\to\your-project\docs
-Add-Content C:\path\to\your-project\CLAUDE.md "`n@.claude/fullstack-pack.CLAUDE.md"
+Add-Content C:\path\to\your-project\CLAUDE.md "`n@.claude/pack-guidance.md"
 ```
 Then open the project in Claude Code and run `/start`.
 
@@ -39,12 +39,4 @@ Prefer doing it on its own commit? See **[INTEGRATION.md](INTEGRATION.md)** (the
   skills/    16 skills — 7 lifecycle + 9 stack (.NET/React/EF Core/API/security/ci-cd/deploy)
   commands/  /start /orchestrate /spec /plan /build /test /review /ship /sync-pack
   rules/     always-on guidelines (common + dotnet + react)
-  hooks/     auto format / test / security-scan
-  mcp/       github · filesystem · postgres · mssql server configs (merge into .mcp.json)
-docs/
-  PRD.md · BACKLOG.md · ARCHITECTURE.md · API.md · DATABASE.md   (this project's plan)
-  templates/   blank docs for future features
-```
-
-## License
-MIT — see [LICENSE](LICENSE).
+  hooks/     au

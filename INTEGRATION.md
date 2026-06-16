@@ -8,13 +8,13 @@ Copy `.claude/` + `docs/` additively and wire the `CLAUDE.md` import, then run `
 # macOS / Linux
 cp -R fullstack-pack/.claude  /your-project/.claude
 cp -R fullstack-pack/docs     /your-project/docs
-echo '@.claude/fullstack-pack.CLAUDE.md' >> /your-project/CLAUDE.md
+echo '@.claude/pack-guidance.md' >> /your-project/CLAUDE.md
 ```
 ```powershell
 # Windows PowerShell
 Copy-Item -Recurse fullstack-pack\.claude C:\your-project\.claude
 Copy-Item -Recurse fullstack-pack\docs    C:\your-project\docs
-Add-Content C:\your-project\CLAUDE.md "`n@.claude/fullstack-pack.CLAUDE.md"
+Add-Content C:\your-project\CLAUDE.md "`n@.claude/pack-guidance.md"
 ```
 
 ## The git stash attach pattern (clean, on its own commit)
@@ -29,7 +29,7 @@ git stash push -u -m "wip before attaching fullstack-pack"
 git checkout -b chore/attach-fullstack-pack
 cp -R /path/to/fullstack-pack/.claude .claude
 cp -R /path/to/fullstack-pack/docs    docs
-echo '@.claude/fullstack-pack.CLAUDE.md' >> CLAUDE.md
+echo '@.claude/pack-guidance.md' >> CLAUDE.md
 git add .claude docs CLAUDE.md
 git commit -m "chore: attach fullstack-pack (.claude + docs/plan)"
 
@@ -37,10 +37,5 @@ git commit -m "chore: attach fullstack-pack (.claude + docs/plan)"
 git stash pop
 ```
 
-## MCP (optional)
-Copy the server blocks you want from `.claude/mcp/*.json` into your project's `.mcp.json`
-(or `claude mcp add ...`) and set env vars — see `.claude/mcp/README.md`.
-
-## Updating / removing
-- Update: re-copy `.claude/` + `docs/` or run `/sync-pack`.
-- Remove: delete the pack-owned items under `.claude/` and the import line in `CLAUDE.md`. Your code is untouched.
+## After attaching — reconcile with the existing codebase (do this first)
+The pack ships with generic defaults. Before building any

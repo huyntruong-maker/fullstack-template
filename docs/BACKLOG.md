@@ -188,9 +188,10 @@ each MVP feature is delivered backend-first within that order. `/orchestrate` sh
 contract → DB → backend → tests → (then) frontend.
 
 ### Phase 0 — Foundation (systems-architect, cicd-engineer, database-expert)
-Solution scaffold (API + Web projects), EF Core wired, DB schema designed for all MVP entities with
-the initial migration, health check, GitHub Actions CI (build + test + lint for .NET and React).
-Acceptance: pipeline green on an empty slice; `docs/DATABASE.md` and `docs/API.md` reflect the schema/contract.
+Scaffold the ASP.NET Core Web API solution, wire EF Core, design the DB schema for all MVP entities
+with the initial migration, add a health check, and set up GitHub Actions CI (build + test + lint for
+the .NET API). Acceptance: pipeline green on an empty API slice; `docs/DATABASE.md` and `docs/API.md`
+reflect the schema/contract.
 
 ### Phase 1 — Backend & Database (build before any UI)
 For each MVP feature in build order: design/integrate DB → implement endpoints → integration-test → update API/DB docs.

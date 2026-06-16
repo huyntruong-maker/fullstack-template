@@ -1,6 +1,6 @@
 # fullstack-pack — operating guidance (drop-in)
 
-Imported into the project's `CLAUDE.md` via `@.claude/fullstack-pack.CLAUDE.md`.
+Imported into the project's `CLAUDE.md` via `@.claude/pack-guidance.md`.
 
 ## Available in `.claude/`
 - agents/ — orchestrator + backend-lead (.NET), frontend-lead (React), database-expert (EF Core),

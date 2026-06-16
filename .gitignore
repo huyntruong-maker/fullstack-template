@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+bin/
+obj/
+
+# Env / secrets
+.env
+.env.*
+*.local
+appsettings.*.local.json
+
+# Build output
+dist/
+build/
+publish/
+out/
+
+# Claude local state (do not commit project-local runtime state)
+.claude/settings.local.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.user

@@ -1,0 +1,13 @@
+{
+  "name": "fullstack-pack",
+  "version": "0.1.0",
+  "description": "Drop-in Claude Code pack: orchestration agents, lifecycle + stack skills, slash commands, rules, hooks, and MCP configs to support any fullstack project (ASP.NET Core Web API + React).",
+  "author": { "name": "claude-fullstack-pack contributors" },
+  "homepage": "https://github.com/huyakai-109/fullstack-template",
+  "license": "MIT",
+  "keywords": ["claude-code","agent-skills","fullstack","dotnet","aspnetcore","react","orchestration","ci-cd"],
+  "commands": "./commands",
+  "agents": "./agents",
+  "skills": "./skills",
+  "hooks": "./hooks/hooks.json"
+}

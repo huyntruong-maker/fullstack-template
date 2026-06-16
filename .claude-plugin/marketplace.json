@@ -1,0 +1,15 @@
+{
+  "name": "fullstack-pack-marketplace",
+  "owner": { "name": "claude-fullstack-pack contributors" },
+  "metadata": {
+    "description": "Marketplace hosting the fullstack-pack plugin.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "fullstack-pack",
+      "source": "./",
+      "description": "Orchestration agents + lifecycle/stack skills + commands + hooks + MCP configs for fullstack (ASP.NET Core Web API + React) projects."
+    }
+  ]
+}

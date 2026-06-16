@@ -21,7 +21,8 @@ Owner agent: backend-lead. Base path `/api/v1`. Errors as RFC 7807 ProblemDetail
 - `POST   /trips` — {name} required → created trip. [F3-US1]
 - `GET    /trips/{id}` — trip with itinerary days + destinations. [F3-US10]
 - `PUT    /trips/{id}` — {name?, startDate?, endDate?}; start ≤ end; regenerate days; warn-confirm when reducing days drops items. [F3-US2]
-- `POST   /trips/{id}/destinations` — add destination {providerPlaceId, name, category, thumbnailUrl, lat, lng, itineraryDayId?}. [F3-US3]
+- `POST   /trips/{id}/destinations` — add destination {providerPlaceId, name, category, thumbnailUrl, lat, lng, itineraryDayId}. [F3-US3]
+  - MVP: `itineraryDayId` is **required** — US3 has the user select a day (drag-drop scheduling US4 is out of MVP). The column stays nullable in the DB to support a future "Saved Places" bucket (US4).
 - `DELETE /trips/{id}/destinations/{destinationId}` — remove from itinerary. [F3-US7]
 
 ## Backlog endpoints (Wave 5)

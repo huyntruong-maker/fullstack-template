@@ -8,15 +8,20 @@ Target stack: **ASP.NET Core Web API (.NET 8+) + React (TypeScript)**.
 This copy is pre-loaded with the plan for a **travel trip-planner** app (see `docs/BACKLOG.md`).
 
 ## Install (drop-in)
-```
+Copy `.claude/` + `docs/` into your project and wire the `CLAUDE.md` import — additive, nothing overwritten:
+```bash
 # macOS / Linux
-./install.sh /path/to/your-project
-
-# Windows PowerShell
-.\install.ps1 -Target C:\path\to\your-project
+cp -R fullstack-pack/.claude /path/to/your-project/.claude
+cp -R fullstack-pack/docs    /path/to/your-project/docs
+echo '@.claude/fullstack-pack.CLAUDE.md' >> /path/to/your-project/CLAUDE.md
 ```
-This copies `.claude/` and `docs/` into your project (additive — nothing overwritten) and adds
-`@.claude/fullstack-pack.CLAUDE.md` to your `CLAUDE.md`. Then open the project in Claude Code and run `/start`.
+```powershell
+# Windows PowerShell
+Copy-Item -Recurse fullstack-pack\.claude C:\path\to\your-project\.claude
+Copy-Item -Recurse fullstack-pack\docs    C:\path\to\your-project\docs
+Add-Content C:\path\to\your-project\CLAUDE.md "`n@.claude/fullstack-pack.CLAUDE.md"
+```
+Then open the project in Claude Code and run `/start`.
 
 Prefer doing it on its own commit? See **[INTEGRATION.md](INTEGRATION.md)** (the `git stash` attach flow).
 
